@@ -1,0 +1,108 @@
+/* Styles specific to the upload form section */
+.upload-section {
+    background-color: #3e3e3e;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px; /* Centered and large */
+    margin: 50px auto; /* Aligns the form to the center of the page */
+    color: white;
+}
+.upload-section::before{
+    content: ''; /* This creates an empty pseudo-element */
+    position: absolute; /* Position it absolutely within the container */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./components/pic\ 2\ \(9\).jpeg');
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4; /* Set the desired opacity of the background image */
+    z-index: -1; /* Place the background behind the content */
+  }
+.upload-section input,
+.upload-section select,
+.upload-section textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.upload-section textarea {
+    resize: none; /* Disable resizing */
+}
+
+
+/* Form title styling */
+.upload-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Styling for the form input fields */
+.upload-section form label {
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.upload-section form input[type="text"],
+.upload-section form input[type="file"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #2f2f2f;
+    color: white;
+    outline: none;
+}
+
+/* Placeholder styling for the form fields */
+.upload-section form input::placeholder {
+    color: #aaa;
+    font-size: 16px;
+}
+
+/* Button styling */
+.upload-section form button {
+    background-color: #6db33f;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Button spans full width */
+}
+
+.upload-section form button:hover {
+    background-color: #5a9d34;
+}
+
+/* Make the form fully responsive */
+@media (max-width: 600px) {
+    .upload-section {
+        width: 90%;
+    }
+
+    .upload-section form input[type="text"],
+    .upload-section form input[type="file"] {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .upload-section form button {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
